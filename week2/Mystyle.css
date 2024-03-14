@@ -1,0 +1,117 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+/*body {
+    text-align: center;  设置文本居中 
+    background-image: url('sea1.jpg'); 
+    background-attachment: scroll;
+    background-position: center;
+    
+} 
+*/
+
+header,section,footer{
+    /*background-color: brown;*/
+    border: 5px #7092BE dashed;
+    /*solid一般直線;dashed虛線;dotted圓點*/
+    padding: 30px 10px 5px 20px;
+    /*padding單一數字是默認四周;四個數字的話是上右下左*/
+    /*margin: 30px;*/
+    width:100%;
+}
+
+header{
+    background-color:#425670;
+    height:20px;
+    
+}
+
+header a{
+    color:wheat;
+    text-decoration: none;
+}
+
+header li{
+    display: inline;
+    margin-right: 5vw;
+}
+
+header ul{
+    position:absolute;
+    text-align: center;
+
+    top:0;
+    line-height: 60px;
+
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+h1 {
+    font-size:70px;
+    margin: 0; /* 去除默认的上下边距，确保居中效果 */
+}
+
+img {
+    border-radius: 50%; /* 将图片裁剪成圆形 */
+    width: 250px; /* 设置图片宽度 */
+    height: 250px; /* 设置图片高度 */
+}
+
+.nameAndPhoto{
+    background-color: #96C4FF;
+    display: flex; justify-content: center; align-items: center;
+}
+
+.Study{
+    background-color: #BCE7FF;
+
+}
+
+.specialty{
+    background-color: #96C4FF;
+}
+
+.habit{
+    background-color: #BCE7FF;
+
+}
+
+table {
+    border: 4px solid black;
+    border-collapse: collapse;
+    background-color: white;
+    font-size: 20px; /* 調整字體大小 */
+    width: 80%;
+    border-radius: 10px; /* 添加圓角邊框 */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+    margin: 20px auto; /* 讓表格在頁面水平置中 */
+
+}
+
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #425670; /* 設置表頭背景顏色 */
+    color: wheat; /* 設置表頭文字顏色 */
+}
+
+td {
+    background-color: #76D1D6; /* 設置單元格背景顏色 */
+}
+
+/* 鼠標懸停時改變背景顏色 */
+tr:hover {
+    background-color: #D5E2FF;
+}
+
+
