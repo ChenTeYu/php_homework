@@ -1,0 +1,83 @@
+<?php
+session_start();
+if($_SESSION["check"]=="Yes"){
+?>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body bgcolor="#C8BFE7">
+
+    </body>
+
+    <form action="result.php" method="post">
+    <fieldset>
+    <legend>2024高大資管報名表單
+
+    </legend>
+    姓名:<input type="text" name="sName" value="" placeholder="please input your name" required>
+    密碼:<input type="password" name="sPassword" required>
+    <br>
+    居住地:
+    <input type="checkbox" name="sCity" value="高雄" checked> 高雄
+    <input type="checkbox" name="sCity" value="台南"> 台南
+    <input type="checkbox" name="sCity" value="台中"> 台中
+    <input type="checkbox" name="sCity" value="桃園"> 桃園
+    <input type="checkbox" name="sCity" value="新北"> 新北
+    <input type="checkbox" name="sCity" value="台北"> 台北
+
+    <br>
+    性別:
+    <input type="radio" name="sGender" value="男"> 男
+    <input type="radio" name="sGender" value="女"> 女
+    <input type="radio" name="sGender" value="不願透漏"> 不願透漏
+    <br>
+    請選擇期望的背景顏色:
+    <input type="color" name="sColor" value=""><br>
+    你生日:
+    <input type="date" name="sDate">
+    <input type="time" name="sTime">
+    郵箱:
+    <input type="email" name="sEmail">
+    <br>
+    <input type="file" name="sFile">
+    <br>
+    你有多想參加?
+    <input type="range" name="sRange">
+    <br>
+
+    飲食偏好:
+    <select name="sHusband[]" multiple>
+        <option value="辣就對了">辣就對了</option>
+        <option value="奶香十足">奶香十足</option>
+        <option value="酸酸甜甜">酸酸甜甜</option>
+        <option value="清淡清爽">清淡清爽</option>
+    </select>
+
+    <br>
+    有意見要說ㄟ
+    <textarea name="sComment" value="" rows="10" cols="50">
+
+    </textarea>
+
+    
+
+    
+    </fieldset>
+    <input type="submit" value="送出">
+    <input type="reset" value="清除輸入">
+    
+</form>
+
+</html>
+
+<?php
+    echo "<a href='logout.php'>登出</a>";
+
+}else{
+    echo "非法進入網頁<br>";
+    echo "5秒後跳轉回登入頁";
+    header("Refresh:5;url=login.php");
+}
+?>
